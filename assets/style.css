@@ -50,17 +50,6 @@ body {
 	position: relative;
 }
 
-.picture.left::before {
-	content: ' ';
-	background-color: #E5975F;
-	width: 374px;
-	height: 329px;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	z-index: -1;
-}
-
 .picture {
 	flex: 1;
 	margin: 0 20px;
@@ -71,7 +60,7 @@ body {
 	width: 100%;
 
 }
-#about-me {
+#about-me, .form-container {
 	flex: 2
 }
 .about-me__title {
@@ -90,9 +79,6 @@ body {
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
 .title{
 	text-align: center;
 	padding-block: 2em;
@@ -175,7 +161,6 @@ body {
 	justify-content: space-between;
 	display: flex;
 	padding : 2em 0;
-
 }
 
 .service {
@@ -201,20 +186,25 @@ body {
 #contact .container {
 	display: flex;
 }
-.picture.right::before {
+.picture.right::before, .picture.left::before {
 	content: ' ';
-	background-color: #BEB45A;
 	width: 374px;
 	height: 329px;
 	position: absolute;
 	bottom: 0;
-	right: 0;
 	z-index: -1;
 }
-.form-container {
-	flex : 2;
 
+.picture.right::before {
+	background-color: #BEB45A;
+	right: 0;
 }
+
+.picture.left::before {
+	background-color: #E5975F;
+	left: 0;
+}
+
 form {
 	display: flex;
 	flex-direction: column;
@@ -222,22 +212,21 @@ form {
 	align-items: flex-start;
 }
 
-form input {
+form input, form textarea {
 	width: 100%;
 	background-color: transparent;
 	border: solid 1px;
-	height: 2.5em;
 	margin-bottom: 20px;
 }
 
+form input {
+	height: 2.5em;	
+}
+
 form textarea {
-	width: 100%;
-	background-color: transparent;
-	border: solid 1px;
 	height: 5em;
 	line-height: 2.5em;
 	font-size: 1.2em;
-	margin-bottom: 20px;
 }
 input[type="submit"] {
 	background-color: #BEB45A;
@@ -263,7 +252,6 @@ input[type="submit"] {
 @media all and (max-width: 1000px) {
 	#about{
 		flex-direction: column;
-
 	}
 	.picture {
 		width: 50%;
@@ -271,15 +259,12 @@ input[type="submit"] {
 	.picture.left::before {
 		width: 100%;
 		height: 30%;
-		position: absolute;
 		bottom: auto;
 		top: 0;
-		left: 0;
-		z-index: -1;
 	}
 	.about-me__title{
 		text-align: center;
-		margin-top: 1em;
+
 	}
 	#services .container {
 		flex-direction: column;
@@ -326,7 +311,7 @@ input[type="submit"] {
 	}
 	.top-header .nav, .top-header .nav ul {
 		width: 100%;
-		padding: 0 0 0 0;
+		padding: 0;
 	}
 	.top-header .nav li {
 		flex: 1;
@@ -353,4 +338,3 @@ input[type="submit"] {
 		width: 80%;
 	}
 }
-
