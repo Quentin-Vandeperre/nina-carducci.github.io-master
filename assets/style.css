@@ -273,7 +273,7 @@ input[type="submit"] {
 		width: 100%;
 		max-width: 100%;
 		height: auto;
-		margin: 2em 0
+		margin: 2em 0;
 	}
 	.service__description{
 		margin-bottom: 1em;
@@ -282,10 +282,8 @@ input[type="submit"] {
 	#services .container::before{
 		width: 30%;
 		height: 100%;
-		bottom: 0;
 		right: 0;
 		left: auto;
-		z-index: 0;
 	}
 
 	#contact .container {
@@ -297,10 +295,6 @@ input[type="submit"] {
 	.picture.right::before {
 		width: 100%;
 		height: 30%;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		z-index: -1;
 	}
 }
 
