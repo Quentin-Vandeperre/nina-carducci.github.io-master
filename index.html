@@ -9,31 +9,16 @@
 	<meta property="og:url" content="https://quentin-vandeperre.github.io/nina-carducci.github.io-master/">
 	<meta property="og:image" content="screensite.webp">
 	<title>Photographe Nina</title>
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
-	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/style.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
+	<link defer href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
 	<meta charset="UTF-8">
-	<script defer src="./assets/bootstrap/bootstrap.bundle.js"></script>
 	<script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script defer src="./assets/maugallery.js"></script>
-	<script defer src="./assets/scripts.js"></script>
-
-	<div itemscope itemtype="https://quentin-vandeperre.github.io/nina-carducci.github.io-master/" >
-		<h1> <span itemprop="job">Photographe</span></h1>
-		<span itemprop="name">Nina Carducci</span>
-		<div itemprop = "address">   
-			Main Adress :
-			  <span itemprop = "streetAddress" > 68 avenue Alsace-Lorraine </span> 
-			  <span itemprop = "postalCode" > 33200 </span> 
-			  <span itemprop = "addressLocality" > Bordeaux, France </span> 
-		</div>
-		Tel:<span itemprop="telephone">( 33 5) 56 67 78 89 </span>
-		<div>Hours: Mo-Fr 10am-7pm 
-			<meta itemprop="openingHours" content="Mo-Fr 10:00-19:00"/>
-		</div>
-	</div>
+	<script defer src="./assets/bootstrap/bootstrap.bundle.min.js"></script>   <!--pour ouvrir la modale, d'abord appeler jquery-->
+	<script defer src="./assets/maugallery.min.js"></script>
+	<script defer src="./assets/scripts.min.js"></script>
 </head>
 
 <body>
@@ -59,13 +44,13 @@
 			</div>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="./assets/images/slider/ryoji-iwata.webp" class="d-block w-100" alt="...">
+					<img src="./assets/images/slider/ryoji-iwata.webp" class="d-block w-100" alt="ryoji-iwata">
 				</div>
 				<div class="carousel-item">
-					<img src="./assets/images/slider/nicholas-green.webp" loading="lazy" class="d-block w-100" alt="...">
+					<img src="./assets/images/slider/nicholas-green.webp" loading="lazy" class="d-block w-100" alt="nicholas-green">
 				</div>
 				<div class="carousel-item">
-					<img src="./assets/images/slider/edward-cisneros.webp" loading="lazy" class="d-block w-100" alt="...">
+					<img src="./assets/images/slider/edward-cisneros.webp" loading="lazy" class="d-block w-100" alt="edward-cisneros">
 				</div>
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -180,5 +165,35 @@
 		</div>
 	</div>
 </footer>
+<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "LocalBusiness",
+		"name": "Nina Carducci Photographe",
+		"image": "https://quentin-vandeperre.github.io/Portfolio-nina-carducci/assets/images/screensite.webp",
+		"@id": "https://quentin-vandeperre.github.io/Portfolio-nina-carducci/assets/images/screensite.webp",
+		"url": "https://quentin-vandeperre.github.io/nina-carducci.github.io-master/",
+		"telephone": "05 56 67 78 89",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "68 avenue Alsace-Lorraine",
+			"addressLocality": "Bordeaux",
+			"postalCode": "33200",
+			"addressCountry": "FR"
+		},
+		"openingHoursSpecification": {
+			"@type": "OpeningHoursSpecification",
+			"dayOfWeek": [
+				"Monday",
+				"Tuesday",
+				"Wednesday",
+				"Thursday",
+				"Friday"
+			],
+			"opens": "10:00",
+			"closes": "19:00"
+		}
+	}
+</script>
 </body>
 </html>
